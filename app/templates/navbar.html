@@ -10,23 +10,23 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <form class="d-flex input-group w-auto">
+    
+            <a href="{{url_for('main.index')}}" class="d-block lo ms-5 me-3 btn btn-info rounded">Home</a>
+            <a href="{{url_for('main.profile')}}" class="lo btn btn-info rounded">Profile</a>
+            
+            <a href="{{url_for('main.new_blog')}}" class="lo ms-3 me-2 btn btn-info rounded">Create-Blog</a>
+            <i class="fab fa-bandcamp mt-3 ms-2"></i>
+
             <input
               type="search"
-              class="form-control rounded"
+              class="form-control rounded ms-5"
               placeholder="Search"
               aria-label="Search"
               aria-describedby="search-addon"
             />
             <span class="input-group-text border-0" id="search-addon">
-              <i class="fas fa-search"></i>
+              <i class="fas fa-search"></i> 
             </span>
-    
-            <a href="{{url_for('main.index')}}" class="d-block lo ms-3 me-3">Home</a>
-            <a href="{{url_for('main.profile')}}" class="lo">Profile</a>
-            
-            <a href="{{url_for('main.new_blog')}}" class="lo ms-3 me-2">Create-Blog</a>
-            <i class="fab fa-bandcamp mt-3 ms-2"></i>
-            
           </form>
           <div class="other">
            
@@ -62,10 +62,10 @@
             {% else %}
             <div class="d-flex">
               <li class="nav-item">
-                  <a  class="nav-link me-2 btn p-2" href="{{url_for('auth.register')}}"><i class="fas fa-user-plus"></i></i>&nbsp; Sign Up</a>
+                  <a  class="nav-link me-2 btn btn-info p-2" href="{{url_for('auth.register')}}"><i class="fas fa-user-plus btn btn-info"></i></i>&nbsp; Sign Up</a>
               </li>
               <li class="nav-item">
-                  <a  class="nav-link me-2 ms-4 btn p-2" href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt "></i>&nbsp; Log In</a>
+                  <a  class="nav-link me-2 ms-4 btn btn-info p-2" href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt "></i>&nbsp; Log In</a>
               </li>
             </div>
             {%endif%}

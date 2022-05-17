@@ -15,7 +15,7 @@ background-color:rgb(9, 9, 32);
 }
 </style>
 
-    <div class="container landing">
+    <div class="container landing bg-info">
         <div class="row ">
                 {% if current_user.is_authenticated %}
                 <div class="col-md-3  mt-2"><a class="btn btn-sm btn-outline-success " id="ref" href="{{url_for('main.new_blog')}}">Newblog<i class="fa-solid fa-plus ms-2 text-success"></i></a></div>
@@ -63,9 +63,9 @@ background-color:rgb(9, 9, 32);
             </div>
             <div class="col-md-4 mt-4">
                 <div class="container">
-                    <div class="card cardquote p-5 qt">
+                    <div class="card cardquote p-5 bg-primary">
                         <div class="card-title">
-                            <p>A quote by: <span style="">{{quote.author}}</span> </p>
+                            <p>A quote by: <span class="text-light">{{quote.author}}</span> </p>
                         </div>
                         <hr>
                         <p class="card-text text-light">{{quote.quote}}</p>
